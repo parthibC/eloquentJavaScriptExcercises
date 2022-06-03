@@ -24,3 +24,4 @@ console.log(sum(range(1,10,3)))
 console.log(sum(range(1,10,-3)))
 console.log(sum(range(10,1,3)))
 console.log(sum(range(10,1,-3)))
+// hello
