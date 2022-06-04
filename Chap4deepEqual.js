@@ -21,10 +21,12 @@ function deepEqual(a,b) {
     } else {/*debug test console.log("Inputs are not objects"); */return (a==b)}
 }
 
-let obj = {here: {is: "an"}, object: 2};
-console.log("1: "+deepEqual(obj, obj));
+let obj1 = {here: {is: "an"}, object: 2};
+let obj2=[1,2,3], obj3=[1,2,3], obj4=obj2;
+console.log(deepEqual(obj1, obj));
 // → true
-console.log("2: "+deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj1, {here: 1, object: 2}));
 // → false
-console.log("3: "+deepEqual(obj, {here: {is: "an"}, object: 2}));
+console.log(deepEqual(obj1, {here: {is: "an"}, object: 2}));
 // → true
+console.log(deepEqual([1,2,3],obj2));
