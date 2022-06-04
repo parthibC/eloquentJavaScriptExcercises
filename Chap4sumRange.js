@@ -4,7 +4,7 @@ function range(s, e, step){
     if (step === undefined) step=1;
     if (e<s && step>0) step=-step;
     if (e>s && step<0) step=-step;
-    for (let i = s; Math.abs(s-i)+Math.abs(e-i)===Math.abs(s-e); i+=step) {
+    for (let i = s; Math.abs(s-i)+Math.abs(e-i)===Math.abs(s-e)/*|s-i|+|e-i|=|s-e|, returns true if i belongs to [s,e]*/; i+=step) {
         arr.push(i);
     }
     console.log(arr);
