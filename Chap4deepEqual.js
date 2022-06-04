@@ -5,7 +5,7 @@ function deepEqual(a,b) {
         let na=(Object.keys(a)).length,
             nb=(Object.keys(b)).length,
             res=true;
-        /*Debugging test: console.log("na is "+na+" and nb is "+nb) */
+        /*debug test: console.log("na is "+na+" and nb is "+nb) */
         
         if (nb==na)
         {
@@ -30,3 +30,4 @@ console.log(deepEqual(obj1, {here: 1, object: 2}));
 console.log(deepEqual(obj1, {here: {is: "an"}, object: 2}));
 // → true
 console.log(deepEqual([1,2,3],obj2));
+// → true
