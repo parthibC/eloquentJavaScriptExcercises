@@ -5,17 +5,20 @@ function deepEqual(a,b) {
         let na=(Object.keys(a)).length,
             nb=(Object.keys(b)).length,
             res=true;
-        /*debug test: console.log("na is "+na+" and nb is "+nb) */
+        /*Debugging test: console.log("na is "+na+" and nb is "+nb) */
         
         if (nb==na)
         {
             for (let i = 0; i < na; i++)
             {
-                res=((Object.keys(a)[i])==(Object.keys(b)[i])&&res)
+                res=(deepEqual((a[Object.keys(a)[i]]),(b[Object.keys(b)[i]]))&&res);
+                /*if (typeof a[Object.keys(a)[i]]=="object"){
+                    res=(deepEqual(a[Object.keys(a)[i]],b[Object.keys(b)[i]]))&&res;
+                };*/
             }
             return res;
         } else {console.log("Object lengths differ, hence:"); return false};
-    } else {console.log("Inputs are not objects"); return (a==b)}
+    } else {/*debug test console.log("Inputs are not objects"); */return (a==b)}
 }
 
 let obj = {here: {is: "an"}, object: 2};
