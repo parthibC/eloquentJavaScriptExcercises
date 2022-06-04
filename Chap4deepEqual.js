@@ -23,7 +23,7 @@ function deepEqual(a,b) {
 
 let obj1 = {here: {is: "an"}, object: 2};
 let obj2=[1,2,3], obj3=[1,2,3], obj4=obj2;
-console.log(deepEqual(obj1, obj));
+console.log(deepEqual(obj1, obj1));
 // → true
 console.log(deepEqual(obj1, {here: 1, object: 2}));
 // → false
