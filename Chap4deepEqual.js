@@ -1,6 +1,6 @@
 function deepEqual(a,b) {
     if (a==null || b==null){console.log("An input is null"); return false}
-    if ((typeof a)=="object" && (typeof b)=="object")
+    if (typeof a=="object" && typeof b=="object")
     {
         let na=(Object.keys(a)).length,
             nb=(Object.keys(b)).length,
